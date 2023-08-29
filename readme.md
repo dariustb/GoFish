@@ -1,19 +1,18 @@
 <!-- PROJECT SHIELDS -->
 [![PyTest][pytest]][pytest-url]
 [![PyLint][pylint]][pylint-url]
-[![GPages][gpages]][gpages-url]
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center" id="readme-top">
   <a href="https://github.com/dariustb/gofish">
-    <img src="https://images.pexels.com/photos/3370381/pexels-photo-3370381.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="GF Logo">
+    <img src="https://i0.wp.com/www.thegamegal.com/wp-content/uploads/2020/04/go-fish.png?fit=1213%2C689&ssl=1" alt="GF Logo">
   </a>
 
   <h1 align="center">Go Fish</h1>
 
   <p align="center">
-    AI-generated lofi hip-hop radio
+    Python Go Fish game
     <br />
     <a href="https://dariustb.github.io/GoFish/"><strong>Explore the docs »</strong></a>
     <br />
@@ -26,11 +25,11 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-Welcome to the world of lofi hip hop! Our radio station is unique in that it generates its music in real-time using Python through Pygame. Linh and myself have built a custom algorithm that creates a relaxing, soothing soundscape that's perfect for studying, working, or simply unwinding.
+Welcome to the Go Fish console game! This project brings the classic card game of Go Fish to life in a text-based format. 
 
-Our code generates a continuous stream of music that's never the same twice, ensuring that our listeners always have a fresh and unique experience. We've designed our platform to be accessible and easy to use, with a sleek and intuitive interface that lets you customize your listening experience to suit your preferences.
+Immerse yourself in the excitement of asking for and collecting matching sets of cards as you compete against computer-controlled players. Experience the thrill of strategy and luck as you try to build your sets while also preventing your opponents from doing the same.
 
-At our core, we're passionate about music and technology, and we're committed to pushing the boundaries of what's possible with code. Whether you're a fan of lofi hip hop or simply curious about the intersection of music and programming, we invite you to join us on this journey of exploration and discovery!
+With a user-friendly text interface, this project aims to capture the essence of the Go Fish card game while providing an engaging and enjoyable gameplay experience. Get ready to dive into a world of cards, tactics, and fun as you challenge yourself to become the ultimate Go Fish champion right from your console.
 
 _Please [refer to the documentation][docs] for the full breakdown and logic explanation of the app._
 
