@@ -6,7 +6,7 @@
 <br />
 <div align="center" id="readme-top">
   <a href="https://github.com/dariustb/gofish">
-    <img src="https://i0.wp.com/www.thegamegal.com/wp-content/uploads/2020/04/go-fish.png?fit=1213%2C689&ssl=1" alt="GF Logo">
+    <img src="https://i0.wp.com/www.thegamegal.com/wp-content/uploads/2020/04/go-fish.png?fit=1213%2C689&ssl=1" height=200 alt="GF Logo">
   </a>
 
   <h1 align="center">Go Fish</h1>
