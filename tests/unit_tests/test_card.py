@@ -33,6 +33,7 @@ def test_card_letter_class(card_letter):
     assert card_letter.d_space == ' '
 
 def test_card_ten_class(card_ten):
+    '''test attr in card_ten'''
     assert card_ten.d_suit  == '♡'
     assert card_ten.d_face  == '10'
     assert card_ten.d_space == ''
