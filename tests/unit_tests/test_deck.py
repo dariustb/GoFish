@@ -2,8 +2,8 @@
 
 # pylint: disable=E0401, W0621
 
-import pytest
 import copy
+import pytest
 from src.py.deck import Deck
 
 @pytest.fixture
@@ -13,7 +13,7 @@ def deck_class():
 
 def test_deck_class(deck_class):
     '''test attr in Deck class'''
-    assert type(deck_class.d_cards) == list
+    assert isinstance(deck_class.d_cards, list)
     assert len(deck_class.d_cards) == 52
 
 def test_build(deck_class):
@@ -41,4 +41,4 @@ def test_shuffle(deck_class):
     deck_class.shuffle()
 
     # Then
-    assert (deck_class.d_cards is not build_cards)
+    assert deck_class.d_cards is not build_cards
