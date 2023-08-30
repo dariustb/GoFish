@@ -5,33 +5,52 @@
 import pytest
 from src.py.card import Card
 
-TEST_SUITS: tuple = ('♠', '♡', '♣️', '⟡')
-TEST_FACES: tuple = ('A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K')
+@pytest.fixture
+def card_number():
+    '''Simple card - number face value'''
+    return Card('♣️','4')
 
 @pytest.fixture
-def card_class():
-    '''Card class fixture'''
-    return Card(
-        suit='♡',
-        face='10'
-    )
+def card_letter():
+    '''Simple card - letter face value'''
+    return Card('♠','J')
 
-def test_card_class(card_class):
-    '''test attr in Card class'''
-    test_space = '' if card_class.d_face == '10' else ' '
-    
-    assert card_class.d_suit in TEST_SUITS
-    assert card_class.d_face in TEST_FACES
-    assert card_class.d_space == test_space
+@pytest.fixture
+def card_ten():
+    '''Edge case card - face value 10'''
+    return Card('♡','10')
 
-def test_suit(card_class):
+def test_card_number_class(card_number):
+    '''test attr in card_number'''
+    assert card_number.d_suit  == '♣️'
+    assert card_number.d_face  == '4'
+    assert card_number.d_space == ' '
+
+def test_card_letter_class(card_letter):
+    '''test attr in card_letter'''
+    assert card_letter.d_suit  == '♠'
+    assert card_letter.d_face  == 'J'
+    assert card_letter.d_space == ' '
+
+def test_card_ten_class(card_ten):
+    assert card_ten.d_suit  == '♡'
+    assert card_ten.d_face  == '10'
+    assert card_ten.d_space == ''
+
+def test_suit(card_number, card_letter, card_ten):
     '''test suit method'''
-    assert card_class.suit() == '♡'
+    assert card_number.suit() == '♣️'
+    assert card_letter.suit() == '♠'
+    assert card_ten.suit()    == '♡'
 
-def test_face(card_class):
+def test_face(card_number, card_letter, card_ten):
     '''test face method'''
-    assert card_class.face() == '10'
+    assert card_number.face() == '4'
+    assert card_letter.face() == 'J'
+    assert card_ten.face()    == '10'
 
-def test_space(card_class):
+def test_space(card_number, card_letter, card_ten):
     '''test space method'''
-    assert card_class.space() == ''
+    assert card_number.space() == ' '
+    assert card_letter.space() == ' '
+    assert card_ten.space()    == ''
