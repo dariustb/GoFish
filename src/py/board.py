@@ -1,9 +1,9 @@
 '''board.py - UI and game mechanics-based library'''
 
 import random
-from py.player import Player
-from py.card   import Card
-from py import constants as const
+from .player import Player
+from .card   import Card
+from . import constants as const
 
 def print_title() -> None:
     '''Prints Go Fish title'''

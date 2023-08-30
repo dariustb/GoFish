@@ -2,9 +2,9 @@
 
 # pylint: disable=R1710
 
-from py.card import Card
-from py.deck import Deck
-from py import constants as const
+from .card import Card
+from .deck import Deck
+from . import constants as const
 
 class Player:
     '''Player hand related attr/functions'''
@@ -52,9 +52,12 @@ class Player:
 
         if face is None:
             face = self.find_card_pair()
+
         if face is None:
+            print('Did not find pair')
             return False
 
+        print('Found pair:', face)
         for card_idx, card in enumerate(self.d_hand):
             if face.upper() == card.face():
                 card_pair.append(card_idx)
@@ -74,10 +77,10 @@ class Player:
     # Search Functions
     def find_card_pair(self) -> str:
         '''Returns face of card pair in hand'''
-        for lower_bound in self.d_hand:
-            for upper_bound in self.d_hand:
-                if lower_bound.face() == upper_bound.face():
-                    return lower_bound.face()
+        for i in range(len(self.d_hand)): # pylint: disable=C0200
+            for j in range(i+1, len(self.d_hand)):
+                if self.d_hand[i].face() == self.d_hand[j].face():
+                    return self.d_hand[j].face()
         return None
 
     # Status Functions

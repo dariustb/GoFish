@@ -1,8 +1,8 @@
 '''deck.py - deck-related class'''
 
 import random
-from py.card import Card
-from py import constants as const
+from .card import Card
+from . import constants as const
 
 class Deck:
     '''Deck building and manipulating'''
