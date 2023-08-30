@@ -2,9 +2,9 @@
 
 # pylint: disable=R1710
 
-from py.card import Card
-from py.deck import Deck
-from py import constants as const
+from .card import Card
+from .deck import Deck
+from . import constants as const
 
 class Player:
     '''Player hand related attr/functions'''
@@ -60,8 +60,8 @@ class Player:
                 card_pair.append(card_idx)
                 if len(card_pair) == 2:
                     break
-        self.d_hand.pop(card_pair.pop())
-        self.d_hand.pop(card_pair.pop())
+        for _ in card_pair:
+            self.d_hand.pop(card_pair.pop())
 
         return True
 
