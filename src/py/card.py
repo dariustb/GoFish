@@ -19,8 +19,3 @@ class Card:
     def space(self) -> str:
         '''Getter for space'''
         return self.d_space
-
-    # Print Functions
-    def show(self) -> None:
-        '''Prints literal card value to stdout'''
-        print(self.d_suit, self.d_face)
